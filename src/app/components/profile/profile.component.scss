@@ -1,0 +1,48 @@
+.user-info-div {
+  width: 90%;
+
+  .user-image {
+    .user-profile-pic {
+      height: 10em;
+      width: 10em;
+      border: 0.1px solid black;
+    }
+  }
+  .user-details {
+    .user-details-div {
+      padding-top: 0.9em;
+    }
+  }
+}
+
+mat-card {
+  margin-top: 0.5em;
+}
+
+@media (min-width: 766px) {
+  mat-card {
+    width: 80%;
+  }
+  .user-details {
+    width: 70%;
+  }
+
+  @media (min-width: 1440px) {
+    mat-card {
+      width: 60%;
+    }
+    .user-details {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 556px) {
+  .user-details {
+    margin-top: 2em;
+  }
+}
+
+:host ::ng-deep mat-tab-header {
+  border-bottom: 1.5px solid #dee1ec;
+}

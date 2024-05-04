@@ -1,0 +1,61 @@
+<mat-card class="rounded-4 mx-auto">
+  <div
+    class="user-info-div d-md-flex p-sm-5 p-4 justify-content-around align-items-center mx-auto gap-5"
+  >
+    <div class="user-image">
+      <img
+        class="user-profile-pic rounded-circle w-33 h-33"
+        src="{{ currentUser.userImageLink }}"
+        alt="Profile-pic"
+      />
+    </div>
+    <div class="user-details align-items-center">
+      <div class="d-flex justify-content-between">
+        <div class="user-name fs-5">
+          {{ "@" + currentUser.userId }}
+        </div>
+        <button mat-raised-button color="accent" class="rounded-5">
+          Follow
+        </button>
+        <button mat-raised-button color="primary" class="rounded-5">
+          Add Friend
+        </button>
+      </div>
+      <div class="user-details-div d-flex justify-content-between fs-6 fw-bold">
+        <div class="user-friendcount">
+          {{ currentUser.userPostCount }} Posts
+        </div>
+        <div class="user-friends pl-4">
+          {{ currentUser.userFriendCount }} Friends
+        </div>
+        <div class="user-friendcount">
+          {{ currentUser.userFollowCount }} Posts
+        </div>
+      </div>
+      <div class="user-details-div user-name fs-6 fw-bold">
+        {{ currentUser.userName }}
+      </div>
+      <div class="user-details-div user-bio fs-6">
+        {{ currentUser.userBio }}
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="rounded-4 mx-auto p-3">
+  <mat-tab-group
+    mat-stretch-tabs="false"
+    mat-align-tabs="center"
+    animationDuration="700ms"
+  >
+    <mat-tab label="Post">
+      <div><app-post></app-post></div>
+    </mat-tab>
+    <mat-tab label="Friends"
+      ><div><app-friends></app-friends></div
+    ></mat-tab>
+    <mat-tab label="Followers"
+      ><div><app-follower></app-follower></div
+    ></mat-tab>
+  </mat-tab-group>
+</mat-card>

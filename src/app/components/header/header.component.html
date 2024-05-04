@@ -1,0 +1,63 @@
+<mat-card>
+  <nav class="navbar navbar-expand-lg bg-transparent navbar-fixed-top">
+    <!-- Add logo image -->
+    <div class="container">
+      <a class="navbar-brand fs-4" href="#">
+        <h2>{{ title }}</h2>
+      </a>
+      <button
+        class="navbar-toggler shadow-none border-0"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuNavbar"
+        aria-controls="menuNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="sidebar offcanvas offcanvas-start"
+        id="menuNavbar"
+        tabindex="-1"
+      >
+        <div class="offcanvas-header text-white border-bottom">
+          <h4 class="offcanvas-title">{{ title }}</h4>
+          <button
+            type="button"
+            class="btn-close btn-close-white shadow-none"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul
+            class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3"
+          >
+            @for(route of routerLinks; track route){
+            <li class="nav-item">
+              <a class="nav-link" routerLink="{{ route.path }}">
+                {{ route.label }}
+              </a>
+            </li>
+            }
+          </ul>
+          <div
+            class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+          >
+            <a
+              class="text-white text-decoration-none login px-3 py-1 rounded-4"
+              routerLink="/login"
+              >Login</a
+            >
+            <a
+              class="login text-white text-decoration-none px-3 py-1 rounded-4"
+              routerLink="/signup"
+              >SignUp</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add menu items -->
+  </nav>
+</mat-card>
