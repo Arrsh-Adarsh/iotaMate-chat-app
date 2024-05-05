@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { UserDetails } from '../../interfaces/userdetails';
 import { PostComponent } from './post/post.component';
@@ -12,7 +12,7 @@ import { FollowerComponent } from './follower/follower.component';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   currentUser!: UserDetails;
 
   ngOnInit(): void {

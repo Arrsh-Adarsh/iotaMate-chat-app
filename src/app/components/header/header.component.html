@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg bg-transparent navbar-fixed-top">
     <!-- Add logo image -->
     <div class="container">
-      <a class="navbar-brand fs-4" href="#">
+      <a class="navbar-brand fs-4" href="/home">
         <h2>{{ title }}</h2>
       </a>
       <button
@@ -35,7 +35,12 @@
           >
             @for(route of routerLinks; track route){
             <li class="nav-item">
-              <a class="nav-link" routerLink="{{ route.path }}">
+              <a
+                class="nav-link"
+                routerLink="{{ route.path }}"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+              >
                 {{ route.label }}
               </a>
             </li>
@@ -47,11 +52,15 @@
             <a
               class="text-white text-decoration-none login px-3 py-1 rounded-4"
               routerLink="/login"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
               >Login</a
             >
             <a
               class="login text-white text-decoration-none px-3 py-1 rounded-4"
               routerLink="/signup"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
               >SignUp</a
             >
           </div>

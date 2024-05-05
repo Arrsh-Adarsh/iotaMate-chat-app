@@ -1,1 +1,14 @@
-<p>login works!</p>
+<mat-card class="login-div mx-auto">
+  <mat-tab-group dynamicHeight [color]="'accent'" [selectedIndex]="selectedTab">
+    <mat-tab label="Login">
+      <div class="example-small-box mat-elevation-z4">
+        <app-login-form class="login-form-div"></app-login-form>
+      </div>
+    </mat-tab>
+    <mat-tab label="Sign Up">
+      <div class="example-large-box mat-elevation-z4">
+        <app-signup-form class="login-form-div"></app-signup-form>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
