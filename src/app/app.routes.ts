@@ -28,5 +28,5 @@ export const routes: Routes = [
         (cp) => cp.LoginComponent
       ),
   },
-  // { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
